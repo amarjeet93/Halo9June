@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cnst_home_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:background="@{color.appBackground}"
+        tools:context=".module.home_screen.HomeFragment">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/toolbar_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:color="@{color}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strings="@{strings}" />
+
+        <RadioGroup
+            android:id="@+id/group_deliver_option"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_04"
+            android:paddingEnd="@dimen/dp_04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout">
+
+            <RadioButton
+                android:id="@+id/rb_delivery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_04"
+                android:layout_marginEnd="@dimen/dp_04"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorPrimary"
+                android:checked="true"
+                android:fontFamily="@font/proximanovasemibold"
+                android:text="@string/delivery_tag"
+                android:textColor="@color/text_color_light"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textSize="@dimen/text_medium" />
+
+            <RadioButton
+                android:id="@+id/rb_pickup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_04"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorPrimary"
+                android:fontFamily="@font/proximanovasemibold"
+                android:text="@string/pick_up_tag"
+                android:textColor="@color/text_color_light"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textSize="@dimen/text_medium" />
+
+
+        </RadioGroup>
+
+        <include
+            android:id="@+id/lyt_search"
+            layout="@layout/item_search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_12"
+            android:layout_marginTop="@dimen/value_8"
+            android:layout_marginEnd="@dimen/value_12"
+            android:layout_marginBottom="@dimen/dp_04"
+            app:color="@{color}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_deliver_option"
+            app:strings="@{strings}" />
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_04"
+            android:orientation="vertical"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyt_search"
+            app:shimmer_duration="1200"
+            tools:visibility="gone">
+
+            <include layout="@layout/shimmer_home_layout" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiprRefresh"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="@{viewModel.isLoading ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyt_search">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_homeItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:background="@{color.listBackground}"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_supplier_product" />
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_menu"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_marginBottom="@dimen/dp_04"
+            android:paddingStart="@dimen/medium_margin"
+            android:paddingTop="@dimen/dp_04"
+            android:paddingEnd="@dimen/medium_margin"
+            android:paddingBottom="@dimen/small_margin"
+            app:background="@{color.primaryColor}"
+            app:backgroundTint="@color/colorPrimary"
+            app:elevation="@dimen/dp_04"
+            app:hideMotionSpec="@anim/bounce_in"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_cart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/white"
+            app:showMotionSpec="@anim/bottom_from_up"
+            app:srcCompat="@drawable/restaurant_menu"
+            app:textcolor="@{color.appBackground}"
+            app:tint="@color/white" />
+
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/large_margin"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_cart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swiprRefresh"
+            tools:visibility="visible" />
+
+
+        <include
+            android:id="@+id/bottom_cart"
+            layout="@layout/layout_bottom_cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:color="@{color}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.codebrew.clikat.module.home_screen.HomeViewModel" />
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+</layout>

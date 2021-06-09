@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <LinearLayout
+        android:id="@id/llContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical"
+        app:background="@{color.appBackground}"
+        tools:ignore="Overdraw">
+
+
+        <include
+            layout="@layout/toolbar_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@{color}"
+            app:strings="@{strings}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvPaymentOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_16"
+                android:text="@string/choosePaymentOption"
+                android:textColor="@color/light_blue"
+                app:categoryType="text_head" />
+
+
+            <RadioGroup
+                android:id="@+id/rdGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbCOD"
+                    style="@style/margin16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_selector"
+                    android:checked="true"
+                    android:drawableStart="@drawable/ic_payment_cash"
+                    android:drawablePadding="@dimen/value_4"
+                    android:includeFontPadding="true"
+                    android:paddingStart="@dimen/value_16"
+                    android:text="@string/cashOnDeli"
+                    android:textColor="@color/brown"
+                    android:textSize="@dimen/text_size_16"
+                    app:checkedDrawable="@{color.primaryColor}"
+                    app:textcolor="@{color.textHead}"
+                    app:unCheckedDrawable="@{color.textSubhead}" />
+
+                <RadioButton
+                    android:id="@+id/rbCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/value_16"
+                    android:button="@drawable/radio_selector"
+                    android:drawableStart="@drawable/ic_payment_card"
+                    android:drawablePadding="@dimen/value_4"
+                    android:includeFontPadding="true"
+                    android:paddingStart="@dimen/value_16"
+                    android:text="@string/debitCreditCard"
+                    android:textColor="@color/light_text_color"
+                    android:textSize="@dimen/text_size_16"
+                    app:checkedDrawable="@{color.primaryColor}"
+                    app:textcolor="@{color.textHead}"
+                    app:unCheckedDrawable="@{color.textSubhead}" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnFinish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/brown"
+            android:gravity="center"
+            android:padding="@dimen/value_16"
+            android:text="@string/finish"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:background="@{color.primaryColor}"
+            app:textcolor="@{color.appBackground}" />
+    </LinearLayout>
+</layout>

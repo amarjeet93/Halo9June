@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvContainer"
+        style="@style/margin8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/value_2"
+        android:layout_marginBottom="@dimen/value_2"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:background="@{color.listItemBackground}"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/ingredient_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/value_8"
+                android:paddingTop="@dimen/value_8"
+                android:paddingRight="@dimen/value_8"
+                android:paddingBottom="@dimen/value_8"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_14"
+                app:categoryType="list_subhead" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/value_8"
+                app:srcCompat="@drawable/ic_arrow_forward"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

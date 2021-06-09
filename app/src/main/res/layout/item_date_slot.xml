@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+    </data>
+
+
+    <TextView
+        android:id="@+id/tv_date_slot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:maxLines="1"
+        android:paddingStart="@dimen/medium_margin"
+        android:paddingTop="@dimen/small_margin"
+        android:paddingEnd="@dimen/medium_margin"
+        android:paddingBottom="@dimen/small_margin"
+        android:text="assaassa"
+        android:textAlignment="center"
+        app:textcolor="@{color.textHead}" />
+
+
+</layout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:background="@{color.appBackground}"
+        tools:ignore="Overdraw">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:background="@{color.appBackground}"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="2dp">
+
+            <com.codebrew.clikat.utils.customviews.ClikatEditText
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_8"
+                android:background="@drawable/rec_4_transparent"
+                android:drawableStart="@drawable/ic_search_grey"
+                android:drawablePadding="@dimen/value_4"
+                android:hint="@string/what_are_you_looking_for"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:padding="12dp"
+                android:singleLine="true"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_12"
+                app:type="search" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:background="@{color.divider}" />
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:background="@{color.listBackground}" />
+
+            <ProgressBar
+                android:id="@+id/progressbAr"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/noData"
+            layout="@layout/nothing_found"
+            app:color="@{color}"
+            app:drawables="@{drawables}"
+            app:strings="@{strings}" />
+
+    </LinearLayout>
+</layout>
+

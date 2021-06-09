@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+
+        <variable
+            name="supplierData"
+            type="com.codebrew.clikat.modal.other.SupplierDataBean" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin"
+        android:paddingStart="@dimen/small_margin"
+        android:paddingEnd="@dimen/small_margin"
+        app:background="@{color.supplier_bg}">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/sdvImage"
+            android:layout_width="88dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:scaleType="centerCrop"
+            app:customSrc="@{supplierData.supplier_image}"
+            app:layout_constraintBottom_toTopOf="@+id/view_divider"
+            app:layout_constraintDimensionRatio="4:3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/round_corner"
+            tools:ignore="ContentDescription" />
+
+
+        <com.codebrew.clikat.utils.customviews.ClikatTextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/dp_04"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:fontFamily="@font/proximanovaregular"
+            android:singleLine="true"
+            android:text="@{supplierData.name}"
+            android:textColor="@color/text_color_light"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold"
+            app:categoryType="list_head"
+            app:layout_constraintBottom_toTopOf="@+id/tvSupplierloc"
+            app:layout_constraintEnd_toStartOf="@+id/tv_rating"
+            app:layout_constraintStart_toEndOf="@+id/sdvImage"
+            app:layout_constraintTop_toTopOf="@+id/sdvImage"
+            app:layout_constraintVertical_bias="0.52"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:gravity="start"
+            app:layout_constraintHorizontal_bias="1.0"
+            tools:text="@string/fb_login_protocol_scheme" />
+
+        <TextView
+            android:id="@+id/tv_supplier_inf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/value_2"
+            android:layout_marginBottom="@dimen/value_2"
+            android:fontFamily="@font/proximanovaregular"
+            android:singleLine="true"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_small"
+            android:visibility="invisible"
+            app:deliveryTime="@{supplierData.delivery_max_time}"
+            app:layout_constraintBottom_toTopOf="@+id/tv_live_track"
+            app:layout_constraintStart_toEndOf="@+id/sdvImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvSupplierloc" />
+
+
+        <com.codebrew.clikat.utils.customviews.ClikatTextView
+            android:id="@+id/tv_live_track"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/value_2"
+            android:drawableStart="@drawable/ic_tracker"
+            android:drawablePadding="@dimen/value_2"
+            android:fontFamily="@font/proximanovaregular"
+            android:singleLine="true"
+            android:text="@string/live_tracking"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_small"
+            app:categoryType="list_head"
+            app:layout_constraintBottom_toBottomOf="@+id/sdvImage"
+            app:layout_constraintStart_toEndOf="@+id/sdvImage"
+            app:layout_constraintTop_toBottomOf="@+id/tv_supplier_inf" />
+
+        <ImageView
+            android:id="@+id/iv_wishlist"
+            android:layout_width="@dimen/icon_small"
+            android:layout_height="@dimen/icon_small"
+            android:layout_marginEnd="@dimen/small_margin"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_live_track"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@+id/tv_live_track"
+            app:srcCompat="@drawable/ic_favourite" />
+
+
+        <com.codebrew.clikat.utils.customviews.ClikatTextView
+            android:id="@+id/tvSupplierloc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/proximanovaregular"
+            android:singleLine="true"
+            android:text="@{supplierData.address}"
+            android:textSize="@dimen/text_small"
+            app:categoryType="text_body"
+            app:layout_constraintBottom_toTopOf="@+id/tv_supplier_inf"
+            app:layout_constraintEnd_toStartOf="@+id/tv_rating"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/sdvImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:text="@string/action_send"/>
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:minEms="4"
+            android:paddingStart="@dimen/medium_margin"
+            android:paddingTop="@dimen/dp_04"
+            android:paddingEnd="@dimen/medium_margin"
+            android:paddingBottom="@dimen/dp_04"
+            android:text="@{(supplierData.rating>0)? String.valueOf(supplierData.rating) : @string/new_tag}"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:ratecolor="@{supplierData.rating}"
+            app:textcolor="@{color.appBackground}" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/line_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

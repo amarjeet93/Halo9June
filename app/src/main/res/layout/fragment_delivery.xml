@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:background="@{color.appBackground}">
+
+        <include
+            layout="@layout/toolbar_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@{color}"
+            app:strings="@{strings}" />
+
+
+        <include
+            android:id="@+id/adrsLyt"
+            layout="@layout/layout_adrs_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@{color}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strings="@{strings}" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/value_16"
+                    android:visibility="gone">
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/brown"
+                        android:textSize="@dimen/text_size_16"
+                        app:categoryType="text_head" />
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/brown"
+                        android:textSize="@dimen/text_size_16"
+                        app:categoryType="text_head" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rdGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbStandard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableStart="@drawable/radio_selector"
+                        android:drawablePadding="@dimen/value_4"
+                        android:includeFontPadding="true"
+                        android:padding="@dimen/value_16"
+                        android:textColor="@color/light_text_color"
+                        android:textSize="@dimen/text_size_16"
+                        app:checkedDrawable="@{color.primaryColor}"
+                        app:textcolor="@{color.textHead}"
+                        app:unCheckedDrawable="@{color.textSubhead}" />
+
+                    <RadioButton
+                        android:id="@+id/rbUrgent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableStart="@drawable/radio_selector"
+                        android:drawablePadding="@dimen/value_4"
+                        android:padding="@dimen/value_16"
+                        android:textColor="@color/light_text_color"
+                        android:textSize="@dimen/text_size_16"
+                        app:checkedDrawable="@{color.primaryColor}"
+                        app:textcolor="@{color.textHead}"
+                        app:unCheckedDrawable="@{color.textSubhead}" />
+
+                    <RadioButton
+                        android:id="@+id/rbPostpone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableStart="@drawable/radio_selector"
+                        android:drawablePadding="@dimen/value_4"
+                        android:padding="@dimen/value_16"
+                        android:text="@string/schedule_delivery"
+                        android:textColor="@color/light_text_color"
+                        android:textSize="@dimen/text_size_16"
+                        app:checkedDrawable="@{color.primaryColor}"
+                        app:textcolor="@{color.textHead}"
+                        app:unCheckedDrawable="@{color.textSubhead}" />
+                </RadioGroup>
+
+                <com.codebrew.clikat.utils.customviews.ClikatTextView
+                    android:id="@+id/tvSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/value_16"
+                    android:paddingTop="@dimen/value_4"
+                    android:paddingRight="@dimen/value_16"
+                    android:paddingBottom="@dimen/value_4"
+                    android:singleLine="true"
+                    android:text="@string/delivery_speed"
+                    android:textColor="@android:color/darker_gray"
+                    android:visibility="gone"
+                    app:categoryType="text_head"
+                    app:text="@{strings.delivery_speed}" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.codebrew.clikat.utils.customviews.ClikatTextView
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/brown"
+            android:gravity="center"
+            android:padding="@dimen/value_16"
+            android:text="@string/_continue"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:background="@{color.button_background}"
+            app:categoryType="button"
+            app:text="@{strings._continue}" />
+
+
+    </LinearLayout>
+
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+</layout>

@@ -1,0 +1,179 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.codebrew.clikat.module.agent_time_slot.AgentTimeSlotFragment">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.codebrew.clikat.module.agent_time_slot.AgentViewModel" />
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:background="@{color.appBackground}">
+
+
+        <include
+            layout="@layout/toolbar_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@{color}"
+            app:strings="@{strings}" />
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:background="@{color.divider}" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/text_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/when_would_you_like_your_service"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/text_medium"
+                android:fontFamily="@font/proximanovaregular"
+                app:layout_constraintEnd_toEndOf="@id/gudline_end"
+                app:layout_constraintStart_toStartOf="@id/gudline_start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textcolor="@{color.textHead}" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gudline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/medium_margin" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gudline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/medium_margin" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/gudline_end"
+                app:layout_constraintStart_toStartOf="@id/gudline_start"
+                app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_timeslot"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible" />
+
+
+                    <include
+                        android:id="@+id/noData"
+                        layout="@layout/nothing_found"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:color="@{color}"
+                        app:drawables="@{drawables}"
+                        app:strings="@{strings}" />
+
+
+                </LinearLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_head"
+                app:tabGravity="fill"
+                android:background="@color/colorPrimary_10"
+                app:tabIndicateColr="@{color.primaryColor}"
+                app:tabSelectedText="@{color.primaryColor}"
+                app:tabTextColr="@{color.textHead}"
+                app:tabIndicatorHeight="4dp"
+                app:tabMode="scrollable" />
+
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:progessBackground="@{color.primaryColor}" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_book_agent"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:padding="@dimen/small_margin"
+            android:text="@string/next"
+            android:fontFamily="@font/proximanovasemibold"
+            app:cornerRadius="@dimen/small_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_mediumLarge"
+            app:background="@{color.primaryColor}"
+            app:textcolor="@{color.appBackground}" />
+
+
+    </LinearLayout>
+
+
+</layout>

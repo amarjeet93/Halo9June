@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        app:background="@{color.appBackground}">
+
+        <ImageView
+            android:id="@+id/ivPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            app:src="@{drawables.img_nothing_found}"
+            app:srcCompat="@drawable/img_nothing_found" />
+
+        <com.codebrew.clikat.utils.customviews.ClikatTextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPlaceholder"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/value_24"
+            android:gravity="center"
+            android:padding="@dimen/value_12"
+            android:text="@string/nothing_found"
+            android:textColor="@color/brown"
+            android:textSize="@dimen/text_size_16"
+            app:categoryType="text_button"
+            app:text="@{strings.nothing_found}" />
+    </RelativeLayout>
+</layout>

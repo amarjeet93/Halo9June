@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:background="@{color.navBackground}">
+
+        <LinearLayout
+            android:id="@+id/llHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.codebrew.clikat.utils.customviews.ClikatImageView
+                android:layout_width="@dimen/nav_icons"
+                android:layout_height="@dimen/nav_icons"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/value_12"
+                android:layout_marginEnd="@dimen/value_12"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_sp_home"
+                app:imageType="nav_icon"
+                app:src="@{drawables.ic_sp_home}"
+                tools:ignore="ContentDescription" />
+            <!--app:customSrc="@{DrawablesConfig.NAV_HOME}"-->
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_12"
+                android:singleLine="true"
+                android:text="@string/home"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                app:categoryType="nav_subhead" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.codebrew.clikat.utils.customviews.ClikatImageView
+                android:layout_width="@dimen/nav_icons"
+                android:layout_height="@dimen/nav_icons"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/value_12"
+                android:layout_marginEnd="@dimen/value_12"
+                android:src="@drawable/ic_sp_support"
+                app:imageType="nav_icon"
+                app:src="@{drawables.ic_sp_support}"
+                tools:ignore="ContentDescription" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvLiveSupprort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_12"
+                android:singleLine="true"
+                android:text="@string/live_support"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                app:categoryType="nav_subhead" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.codebrew.clikat.utils.customviews.ClikatImageView
+                android:layout_width="@dimen/nav_icons"
+                android:layout_height="@dimen/nav_icons"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/value_12"
+                android:layout_marginEnd="@dimen/value_12"
+                android:src="@drawable/ic_sp_cart"
+                app:imageType="nav_icon"
+                app:src="@{drawables.ic_sp_cart}"
+                tools:ignore="ContentDescription" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_12"
+                android:singleLine="true"
+                android:text="@string/cart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                app:categoryType="nav_subhead" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPromotions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.codebrew.clikat.utils.customviews.ClikatImageView
+                android:layout_width="@dimen/nav_icons"
+                android:layout_height="@dimen/nav_icons"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/value_12"
+                android:layout_marginEnd="@dimen/value_12"
+                android:src="@drawable/ic_sp_promotions"
+                app:imageType="nav_icon"
+                app:src="@{drawables.ic_sp_promotions}"
+                tools:ignore="ContentDescription" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvPromotions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_12"
+                android:singleLine="true"
+                android:text="@string/promotions"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                app:categoryType="nav_subhead"
+                app:text="@{strings.promotions}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.codebrew.clikat.utils.customviews.ClikatImageView
+                android:layout_width="@dimen/nav_icons"
+                android:layout_height="@dimen/nav_icons"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/value_12"
+                android:layout_marginEnd="@dimen/value_12"
+                android:src="@drawable/ic_sp_notifications"
+                app:imageType="nav_icon"
+                app:src="@{drawables.ic_sp_notifications}"
+                tools:ignore="ContentDescription" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_12"
+                android:singleLine="true"
+                android:text="@string/notifications"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                app:categoryType="nav_subhead" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCompareProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.codebrew.clikat.utils.customviews.ClikatImageView
+                android:layout_width="@dimen/nav_icons"
+                android:layout_height="@dimen/nav_icons"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/value_12"
+                android:layout_marginEnd="@dimen/value_12"
+                android:src="@drawable/ic_compare"
+                app:imageType="nav_icon"
+                app:src="@{drawables.ic_compare}"
+                tools:ignore="ContentDescription" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvCompareProdutcs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_12"
+                android:singleLine="true"
+                android:text="@{@string/compareProduct(strings.product)}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                app:categoryType="nav_subhead" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

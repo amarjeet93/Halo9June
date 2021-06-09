@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl_main"
+    >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:onClick="@{(view) -> clickListener.onEditDelete(view,addressBean)}"
+            android:padding="@dimen/dp_04"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_adrs_line_first"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_customer_adrs"
+            app:srcCompat="@drawable/menu_more" />
+
+        <TextView
+            android:id="@+id/tv_adrs_line_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_04"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/dp_04"
+            android:fontFamily="@font/proximanovaregular"
+            android:maxLines="2"
+            android:text="@{addressBean.address_line_1 ,default=`Address Line First`}"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/tv_customer_adrs"
+            app:layout_constraintTop_toBottomOf="@+id/tv_customer_adrs" />
+
+        <TextView
+            android:id="@+id/tv_customer_adrs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/dp_04"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:fontFamily="@font/proximanovasemibold"
+            android:text="@{addressBean.customer_address , default=`Customer Address`}"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="addressBean"
+            type="com.codebrew.clikat.data.model.api.AddressBean" />
+
+        <variable
+            name="clickListener"
+            type="com.codebrew.clikat.module.dialog_adress.adapter.AddressListener" />
+
+    </data>
+
+</layout>

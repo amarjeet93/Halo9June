@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="default_notification_channel_id">app_notification</string>
+    <string name="packages">Paquetes</string>
+    <string name="welcome">Bienvenidos</string>
+    <string name="recomended">Recomendados</string>
+    <string name="offers">Ofertas</string>
+    <string name="home">Casa</string>
+    <string name="live_support">Live Support</string>
+    <string name="cart">Carrito</string>
+    <string name="promotions">Promociones</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="my_account">Mi cuenta</string>
+    <string name="my_favorites">Mis favoritos</string>
+    <string name="my_wishlist">mi lista de deseos</string>
+    <string name="order_history">Historia de pedidos</string>
+    <string name="track_my_order">Seguir mi orden</string>
+    <string name="rate_my_order">Califica mi orden</string>
+    <string name="upcoming_order">Ordenes actuales</string>
+    <string name="loyality_points">Puntos de fidelidad</string>
+    <string name="share_app">Compartir aplicación</string>
+    <string name="settings">Configuraciones</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="forgot_password">¿Se te olvidó tu contraseña?</string>
+    <string name="_continue">Continuar</string>
+    <string name="sign_up">Regístrate</string>
+    <string name="signup_otp_msg">Le enviaremos un Codigo (contraseña única) a su número de teléfono. Toque el botón de continuar después de escribir correctamente su número de teléfono.</string>
+    <string name="send_otp">Enviar Codigo </string>
+    <string name="recieve_otp">¿No recibió su código?</string>
+    <string name="resend_otp">Reenviar Codigo</string>
+    <string name="submit">Enviar</string>
+    <string name="tap_to_add_profile_pic">Toca para agregar una foto de perfil</string>
+    <string name="finish">Terminar</string>
+    <string name="oreder_scheduler">Programador %s</string>
+    <string name="order_details">“Detalles de la orden</string>
+    <string name="schedule_your_order">Programe su orden</string>
+    <string name="delivered">Entregado</string>
+    <string name="reorder">Reordenar</string>
+    <string name="cancel_order">Cancelar %s</string>
+    <string name="track">Track</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_digit_phone_number">Número de teléfono</string>
+    <string name="enter_otp">Ingrese Codigo</string>
+    <string name="hint_full_name">Nombre completo</string>
+    <string name="action_okay">Okay</string>
+    <string name="empty_email">Por favor, introduzca la identificación del correo electrónico</string>
+    <string name="invalid_email">Por favor, introduzca una identificación de correo electrónico válida</string>
+    <string name="empty_pwd">Por favor, ingrese contraseña</string>
+    <string name="empty_phone_number">Por favor ingrese el número de teléfono</string>
+    <string name="empty_otp">Por favor, introduzca OTP</string>
+    <string name="empty_fn">Por favor ingrese el nombre completo</string>
+    <string name="payment_method">Método de pago</string>
+    <string name="set_schedule">Establecer horario</string>
+    <string name="select_category">selecciona una categoría</string>
+    <string name="select_dates">Seleccionar fechas</string>
+    <string name="internet_connection">Por favor revise su conexion a internet.</string>
+    <string name="login_expired">Lo sentimos, su cuenta ha sido registrada en otro dispositivo. Inicie sesión nuevamente para continuar.</string>
+    <string name="ok">Okay</string>
+    <string name="guest">Huésped</string>
+    <string name="edit">Editar</string>
+    <string name="qunatity">Cantidad</string>
+    <string name="net_total">Total</string>
+    <string name="delivery">Delivery</string>
+    <string name="delivery_speed">Velocidad de entrega</string>
+    <string name="delivery_charges">Gastos de envio</string>
+    <string name="handling_charges">Gastos de manejo</string>
+    <string name="empty">El campo no puede estar vacío</string>
+    <string name="txtOrderDone">%s hecho hasta ahora</string>
+    <string name="txtPaymentOptions">Opciones de pago</string>
+    <string name="txtInbusiness">En el negocio desde</string>
+    <string name="reviews">Comentarios</string>
+    <string name="go">Ir</string>
+    <string name="multi_serach">Búsqueda múltiple</string>
+    <string name="what_are_you_looking_for">¿Qué estás buscando?</string>
+    <string name="max_limit_reached">Max. límite alcanzado</string>
+    <string name="multisercah">Búsqueda múltiple</string>
+    <string name="NoCart">No se encontraron artículos</string>
+    <string name="favorites">Favorito</string>
+    <string name="share_sub">Aplicación móvil %s</string>
+    <string name="share_body">Pensé que te gustaría esta aplicación para hacer la vida más simple! Puedes pedir de todos los Restaurantes de Caracas y pagar en dólares. -http: //onelink.to/nukwfk</string>
+    <string name="save">Guardar</string>
+    <string name="cashOnDeli">Efectivo</string>
+    <string name="debitCreditCard">Tarjeta de crédito débito</string>
+    <string name="choosePaymentOption">Elija la opción de pago</string>
+    <string name="selectAdress">Por favor agregue la dirección.</string>
+    <string name="order_summary">Resumen de la orden</string>
+    <string name="pickkup">Pickup</string>
+    <string name="items">Artículos</string>
+    <string name="net_payable">Neto por pagar</string>
+    <string name="additional_remarks">Observaciones adicionales</string>
+    <string name="place_order">Colocar orden</string>
+    <string name="successFavourite">Añadido a favoritos con éxito.</string>
+    <string name="successUnFavourite">Eliminado de favoritos con éxito.</string>
+    <string name="update">¡Actualizar!</string>
+    <string name="cancel">Cancelar</string>
+    <string name="pointsEarnedSoFar">Puntos ganados hasta ahora</string>
+    <string name="change_password">Cambia la contraseña</string>
+    <string name="notification_lang">Idioma de notificación</string>
+    <string name="enterReview">Escribe tu reseña</string>
+    <string name="open">Abierto ahora</string>
+    <string name="filter">Filtros</string>
+    <string name="old_password">Contraseña anterior</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="password_match_error">Las contraseñas no coinciden</string>
+    <string name="clearCart">Su carrito se borrará si selecciona un pedido diferente. Estas seguro que deseas continuar?</string>
+    <string name="Ok">Okay</string>
+    <string name="apply">Aplicar</string>
+    <string name="clear">Borrar</string>
+    <string name="close" tools:ignore="PrivateResource">Cerrado</string>
+    <string name="cash">Efectivo</string>
+    <string name="busy">Ocupado</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="please_login">Por favor Iniciar sesión</string>
+    <string name="order_no">%s No.</string>
+    <string name="placed_on">Colocado en</string>
+    <string name="delivered_on">Entregado en</string>
+    <string name="expected_delivered_on">Entrega %s en</string>
+    <string name="points">Puntos</string>
+    <string name="passwrd_lenght">La longitud de la contraseña debe tener al menos 6 caracteres.</string>
+    <string name="no_internet_connection_found">No se encontró conexión a internet</string>
+    <string name="retry">Procesar de nuevo</string>
+    <string name="pending">Pendiente</string>
+    <string name="confirmed">Confirmado</string>
+    <string name="reject">Rechazar</string>
+    <string name="reached">Alcanzado</string>
+    <string name="doYouCancel">¿Realmente quieres cancelar esta orden?</string>
+    <string name="date_time_msg">Por favor seleccione la fecha y hora de recogida</string>
+    <string name="rate_">Tarifa</string>
+    <string name="add_to_cart">Añadir al carrito</string>
+    <string name="nothing_found">¡Nada Encontrado!</string>
+    <string name="results_for">Resultados para</string>
+    <string name="skip">Omitir</string>
+    <string name="success">Éxito</string>
+    <string name="succesfully_scheduled">Su pedido ha sido programado con éxito.</string>
+    <string name="succesfully_order">Su %s ha sido realizada con éxito.</string>
+    <string name="no_order_found">No se encontraron ordenes!</string>
+    <string name="no_fav_found">No  %s ha encontrado ningún favorito!</string>
+    <string name="success_logout">Has cerrado la sesión correctamente.</string>
+    <string name="status">Estado</string>
+    <string name="payment">Pago</string>
+    <string name="total_amount">Cantidad total</string>
+    <string name="placed">Metido</string>
+    <string name="near_you">Cerca de usted</string>
+    <string name="minimum_order">Orden Mínima</string>
+    <string name="delivery_time">El tiempo de entrega</string>
+    <string name="payment_options">Opciones de pago</string>
+    <string name="desc">Sobre %s</string>
+    <string name="review">Comentarios</string>
+    <string name="about">Unicidad</string>
+    <string name="total">Total</string>
+    <string name="sub_total">Sub Total</string>
+    <string name="type_here">Escriba aquí</string>
+    <string name="action_send">Enviar</string>
+    <string name="others">Otros</string>
+    <string name="just_now">Justo ahora</string>
+    <string name="a_min_ago">hace un minuto</string>
+    <string name="min_ago">Hace un minuto</string>
+    <string name="a_hour_ago">hace una hora</string>
+    <string name="hour_ago">Hace una hora</string>
+    <string name="yest">Ayer</string>
+    <string name="days_afo">Hace días</string>
+    <string name="days">Días</string>
+    <string name="forgot_password1">Se te olvidó tu contraseña</string>
+    <string name="log_out_msg">¿Seguro que quieres cerrar sesión?</string>
+    <string name="view_all">Ver todo</string>
+    <string name="select_country">Seleccionar país</string>
+    <string name="pick_uptime">Seleccione fecha y hora</string>
+    <string name="supplier_name">%s:</string>
+    <string name="terms">Condiciones</string>
+    <string name="isMonthlyErrorMsg">Seleccione programar fechas mensuales.</string>
+    <string name="min_order_time">Min. El tiempo de entrega</string>
+    <string name="hour">Hora</string>
+    <string name="hours">Horas</string>
+    <string name="min">Minutos</string>
+    <string name="day">Día</string>
+    <string name="compareProduct">Compara %s</string>
+    <string name="results">Resultados</string>
+    <string name="supplierClosed">Actualmente está cerrado, su pedido será confirmado durante las próximas horas de trabajo del proveedor / día.</string>
+
+
+    <string name="supplierBusy1">Actualmente está ocupado para pedidos de hoy. Su pedido puede llegar tarde.</string>
+    <string name="wrong_date_selection">Por favor posponer para fecha y hora futura</string>
+    <string name="per_hour">Por hora</string>
+    <string name="Alert">¡Alerta!</string>
+
+    <string name="percentage_tag">Upto %.2f off</string>
+
+
+    <string name="about_us">Sobre nosotros</string>
+    <string name="clearCart_lang">Su carrito se borrará si selecciona un idioma diferente. ¿Estas seguro que deseas continuar?</string>
+    <string name="sort_by">Ordenar por</string>
+    <string name="clear_cart_back">Su carrito estará vacío si regresa a la pantalla anterior.</string>
+    <string name="add">Añadir</string>
+    <string name="alert">Alerta !</string>
+    <string name="scheduled_order">Orden programada</string>
+    <string name="expected_delivery_on">Entrega esperada en</string>
+    <string name="yes">si</string>
+    <string name="loyality_products">Productos de fidelización</string>
+    <string name="loyality_orders">Lealtad %s</string>
+    <string name="track_noti">Solo puede rastrear su pedido después del tiempo de entrega esperado</string>
+    <string name="no_notification">No se encontró ninguna notificación.</string>
+    <string name="share_supplier">Me gustaría recomendar el uso de ankiy a través de Clikat</string>
+
+    <string name="sup">¡Comparte!</string>
+    <string name="basket_message">¿Has olvidado completar tu último carrito de compras?</string>
+
+    <string name="order_pending">%s actual</string>
+    <string name="no_date_selected">Sin fecha seleccionada</string>
+    <string name="ankiy">ankiy</string>
+
+    <string name="cancel_msg">Su %s ha sido cancelado con éxito.</string>
+
+    <string name="search">Buscar %s</string>
+    <string name="discount">Descuento</string>
+
+
+    <string name="reddem">Redimir</string>
+
+    <string name="location">Ubicación</string>
+
+    <string name="banner">Banner</string>
+    <string name="reviews_text"> %.0f Comentarios</string>
+
+    <string name="hour_tag">%d hora</string>
+
+
+    <string name="day_tag">%d día</string>
+
+    <string name="minute_tag">%d min</string>
+
+    <string name="currency_tag">%1$s %2$.2f</string>
+
+    <string name="discountprice_tag">%1$s %2$.2f/pz</string>
+
+    <string name="supplier_tag">pz %s</string>
+
+
+    <string name="discountprice_search_multiple">%1$s %2$.2f/pz %3$s</string>
+
+    <string name="filter_price_tag">%1$s %2$d - %1$s %3$d</string>
+
+    <string name="result_tag">%d Resultados</string>
+
+    <string name="resturant_count_tag">%1$d %2$s</string>
+
+    <string name="clearCart_multiprod_quant">Su carrito será borrado si selecciona múltiples cantidades de productos. ¿Estas seguro que deseas continuar?</string>
+
+    <string name="clearCart_product">Su carrito será borrado si selecciona un producto diferente. ¿Estas seguro que deseas continuar?</string>
+
+    <string name="title_activity_filter_screen">FilterScreenActivity</string>
+
+    <string name="search_hint">¿Qué estás buscando?</string>
+    <string name="no">no</string>
+
+    <string name="valid_email">Por favor ingrese su correo electrónico</string>
+    <string name="cart_added">Agregado al carro</string>
+
+    <string name="title_for_your_review">Título para su revisión</string>
+    <string name="write_review_here">Escribe una reseña aquí …</string>
+    <string name="rating_review">Clasificación</string>
+    <string name="rate_product">Tasa %s</string>
+    <string name="rate_supplier">Tasa %s</string>
+    <string name="product_description">Descripcion del %s</string>
+    <string name="select_agent">Seleccione %s</string>
+    <string name="select_supplier">Seleccione %s</string>
+    <string name="book_an_appointment">Reservar una cita</string>
+    <string name="agent_available">%s disponible</string>
+    <string name="agent_not_available">%s no disponible</string>
+    <string name="experience_tag">%d años de experiencia</string>
+
+    <string name="agent_detail">%s Detalle</string>
+    <string name="view_menu">Ver menú</string>
+    <string name="change">Cambio</string>
+    <string name="schedule_delivery">Programar entrega</string>
+    <string name="qty">Cantidad</string>
+    <string name="view_products_as">Vista de %s</string>
+    <string name="total_item_tag">%d artículos</string>
+    <string name="faq">FAQ</string>
+
+
+
+    <string name="restaurant_order_type">Seleccione%2$s de %1$s para disfrutar de los servicios en su hogar</string>
+    <string name="supplier_lookup_tag">Buscando %s ?</string>
+
+    <string name="order_tag">%1$s #%2$d</string>
+
+
+    <string name="long_desc">Una descripción larga es una forma de proporcionar texto alternativo largo para elementos que no son de texto, como imágenes. En general, el texto alternativo de más de 250 caracteres, que no puede hacerse más conciso sin hacerlo menos descriptivo o significativo, debe tener una descripción larga. Ejemplos de uso adecuado de descripciones largas son cuadros, gráficos, mapas, infografías y otras imágenes complejas.  Al igual que el texto alternativo, la descripción larga debe ser descriptiva y significativa. También debe incluir todo el texto que se incorpora a la imagen. Una descripción larga debería proporcionar a los usuarios con discapacidad visual tanta información como los usuarios videntes entenderían de la imagen.</string>
+
+
+    <string name="book_slot">Confirmar</string>
+    <string name="phone_tag">Ingrese la OTP enviada a %s</string>
+    <string name="in_kitchen">En la cocina</string>
+
+    <string name="instruction">instrucción</string>
+    <string name="explanation_multiple_request">Solicitamos el permiso, ya que es necesario que la aplicación realice su funcionalidad. \ NSeleccione \ "Conceder permiso \" para volver a intentarlo y \ "Cancelar \" para salir.</string>
+    <string name="when_would_you_like_your_service">¿Cuándo quieres tu servicio?</string>
+
+    <string name="disc_yes_text">Sí \ nMostrar productos en descuento</string>
+    <string name="disc_no_text">No \ nNo mostrar productos con descuento</string>
+
+    <string name="avail_yes_text">Sí \ nMostrar productos que están disponibles en stock</string>
+    <string name="avail_no_text">No \ nNo mostrar productos que no están disponibles en stock</string>
+
+    <string name="price_low_to_high">Precios de barato a caro</string>
+    <string name="price_high_to_low">Precio: mayor a menor</string>
+    <string name="popularity">Popularidad</string>
+    <string name="price_range">Rango de precios</string>
+    <string name="availability">Disponibilidad</string>
+    <string name="remove_cart">Eliminar</string>
+    <string name="add_cart_tag">Añadir</string>
+    <string name="login_using_facebook">Inicie sesión con Facebook</string>
+    <string name="login_signup_text">¿No tienes una cuenta? Regístrate</string>
+
+    <string name="popular_tag">%s Populares</string>
+
+    <string name="proceed">Proceder</string>
+    <string name="reset">Borar filtros</string>
+    <string name="brands">Marcas</string>
+    <string name="done">Hecho</string>
+    <string name="next">próximo</string>
+    <string name="view_more">Ver más</string>
+    <string name="view_detail">Ver Detalle</string>
+    <string name="get_started">Empezar</string>
+    <string name="track_order">Track order</string>
+    <string name="shop_by_type">Comprar por tipo</string>
+    <string name="special_offers">Ofertas especiales</string>
+    <string name="awesome_deals">Ofertas increíbles desbloqueadas todos los días</string>
+    <string name="awesome_product">Producto impresionante</string>
+    <string name="recent_orders">órdenes recientes</string>
+    <string name="we_hand_picked_some_great_services_for_you">Seleccionamos algunos %s excelentes para ti.</string>
+    <string name="categories">Categorías</string>
+    <string name="product_price">Precio del producto:</string>
+    <string name="view_slot">Ver ranura</string>
+    <string name="book_now">Reservar ahora</string>
+    <string name="occupation_here">Ocupación aquí</string>
+    <string name="order_recieved">Orden recibida</string>
+    <string name="otp_verification">Verificación OTP</string>
+    <string name="enter_mobile">Entrar en el móvil</string>
+    <string name="signup">Regístrate</string>
+    <string name="signup_using_facebook">Registrarse usando Facebook</string>
+    <string name="don_t_have_an_account_login">¿No tienes una cuenta? Iniciar sesión</string>
+    <string name="menu">Menú</string>
+    <string name="buy_now">Compra ahora</string>
+    <string name="delivery_location">Lugar de entrega</string>
+    <string name="rating_amp_reviews">Calificacion y Revision</string>
+    <string name="no_rating_found">No se encontró calificación</string>
+    <string name="no_promocode_cart">No se encontró ningún código promocional con respecto al carrito</string>
+    <string name="enter_valid_number">Ingrese un número de teléfono válido</string>
+    <string name="artist_not_available">%s no disponible para una fecha en particular</string>
+    <string name="selected_time_alert">La hora seleccionada no puede ser menor que la fecha y hora actual</string>
+    <string name="select_maximum_price_alert">por favor seleccione precio máximo</string>
+    <string name="select_category_alert">por favor seleccione categoría</string>
+    <string name="title_activity_home">InicioActividad</string>
+    <string name="title_home">Inicio</string>
+
+    <string name="complete_address">Completa tu dirección</string>
+    <string name="your_location">Tu ubicación</string>
+    <string name="add_address">Añadir dirección</string>
+    <string name="delete">Eliminar</string>
+    <string name="pending_orders">Ordenes pendientes</string>
+    <string name="completed_orders">Ordenes completadas</string>
+    <string name="customer_code">Código de cliente</string>
+    <string name="enter_customer_code">Ingrese el código del cliente</string>
+
+
+    <string name="addon_tag">Elección de %s</string>
+
+    <string name="addon_name_tag">Complemento: %s</string>
+
+    <string name="orders">Pedidos</string>
+    <string name="view_category">Ver categorías</string>
+    <string name="tax">Tax</string>
+    <string name="pickup_from">Pickup de</string>
+    <string name="delivery_to">Envaiar a</string>
+    <string name="approved">Aprobado</string>
+    <string name="on_the_way">En Camino</string>
+    <string name="started">Started</string>
+    <string name="ended">Ended</string>
+    <string name="customer_cancelled">Cancelado por el cliente</string>
+    <string name="shipped">Shipped</string>
+    <string name="packed">Packed</string>
+    <string name="ready_to_pick">Ready to be Pick</string>
+    <string name="self_pickup">Pickup</string>
+    <string name="delivery_txt">Entrega</string>
+    <string name="current_adrs">Current Address</string>
+
+    <string name="privacy_policy">Política de privacidad</string>
+
+    <string-array name="more_array">
+        <item>Pedidos</item>
+        <item>Compartir aplicación</item>
+        <item>Términos y Políticas</item>
+        <item>Ayuda</item>
+        <item>Política de privacidad</item>
+
+    </string-array>
+
+    <string-array name="app_language">
+        <item>English</item>>
+        <item>Spanish</item>>
+        <item>Arabic</item>>
+    </string-array>
+
+    <string-array name="app_search">
+        <item>Restaurante</item>
+        <item>Producto</item>
+    </string-array>
+
+    <string name="maximum_limit_cart">Límite máximo alcanzado</string>
+    <string name="search_food_hint">Buscar artículos alimenticios</string>
+
+    <string name="addon_selction">Por favor seleccione la opción %s</string>
+    <string name="special_offer">Oferta Especiales</string>
+    <string name="discount_product">Discount Products</string>
+    <string name="popular_brand">Marcas Populares</string>
+    <string name="royo_recommend">Nuestras Recomendaciones</string>
+    <string name="order_now">Comprar ahora</string>
+    <string name="picked_up">Picked Up</string>
+    <string name="status_on">%s on</string>
+
+    <string name="both_delivery_msg_option">Este Restaurante permite Pickup y Delivery, que prefieres?</string>
+    <string name="out_delivery">Out For Delivery</string>
+    <string name="make_payment">Pagar</string>
+    <string name="name_on_card">Nombre en la tarjeta</string>
+    <string name="total_payable_amount">Total Payable Amount %1$s %2$.2f</string>
+    <string name="no_chat_found">No Chat Found</string>
+    <string name="write_a_message">Write a message</string>
+
+    <string name="no_quetion_found">No question found</string>
+    <string name="select_answer">Select atleast one answer from the list</string>
+    <string name="back">Back</string>
+
+    <string name="set_your_location_manually">Set your location manually</string>
+    <string name="btn_add_address">Add Address</string>
+
+
+
+    //zipeats copy
+    <string name="add_a_tip_to_rider">"Propina para tu Yummer"</string>
+    <string name="tip_charges">Tip Charges</string>
+    <string name="eta">ETA</string>
+
+
+    <string name="share_referral">Use code %1$s to get %2$s as referral bonus here: %3$s</string>
+    <string name="referral_text_tag">Refer a friend and get %1$s and your friend gets %2$s after successful completion of his first Order.</string>
+    <string name="referral">Referral</string>
+    <string name="refer_a_friend">Refiere a un pana</string>
+    <string name="my_referal">Mis Referrals</string>
+    <string name="invite_your_friend_and_earn_money">Invita a tus pReady Chef y gana créditos en Yummy</string>
+    <string name="hint_referral_code">Referral Code</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="pay_using">Método de Pago</string>
+    <string name="choose_payment">Elige pago</string>
+    <string name="add_customization">Diseña tu pedido</string>
+    <string name="morning">Mañana</string>
+    <string name="aftenoon">Mediodía</string>
+    <string name="evening">Tarde</string>
+    <string name="night">Noche</string>
+    <string name="out_of_stock">Out of Stock</string>
+    <string name="customizable">Customizable</string>
+    <string name="remove">Remover</string>
+    <string name="promo_remove">Promo removido exitosamente</string>
+    <string name="service_at">Service At</string>
+    <string name="cod">Efectivo</string>
+    <string name="please_select_slot">Please select Booking Time-Slot</string>
+
+    <string name="sorry_cart_value">Disculpa! La orden mínima debe ser de %s</string>
+    <string name="referral_amt_tag">Available Referral Points %s</string>
+    <string name="promo_code">Código promo</string>
+    <string name="price_detail">Detalle del total</string>
+    <string name="promo_applied">Promo Applied</string>
+    <string name="service_date">Service Date :-</string>
+    <string name="service_time">Service Time :-</string>
+
+    <string name="agent_to_be_book">Agent to be Book:-</string>
+    <string name="change_date_amp_time">Change Date &amp; Time</string>
+    <string name="choose_booking_time_slot">Choose Booking Time Slot</string>
+    <string name="wait">Wait !</string>
+    <string name="pickup">Recogerse</string>
+    <string name="select_location">Select Location</string>
+    <string name="search_for_your_location">Search for your location …</string>
+    <string name="edit_address">Edit Address</string>
+    <string name="update_address">Update Address</string>
+    <string name="please_complete_address">Please add Complete address</string>
+    <string name="house_building_tag">House no./ Flat no. / Floor / Building</string>
+    <string name="search_for_resturant">Search for restaurante, cousins….</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="start_time">Start Time</string>
+    <string name="pick_up">Pickup From</string>
+    <string name="address_detail">Address Detail</string>
+    <string name="pickup_on">Picked Up On</string>
+    <string name="provide_prod_rating">Please provide product rating</string>
+    <string name="provide_rate_title">Please provide rate title</string>
+    <string name="provide_rate_comment">Please provide rate comment</string>
+    <string name="enter_name">Please Enter Name</string>
+    <string name="enter_valid_card">Please Enter Valid Card</string>
+    <string name="enter_valid_cvc">Please Enter Valid Cvc</string>
+    <string name="enter_valid_expiry_month">Please Enter Valid Expiry Month</string>
+    <string name="enter_valid_date">Please Enter Valid Expiry Date</string>
+
+    <string name="place_booking">Place Booking</string>
+    <string name="razor_pay">Razor Pay</string>
+    <string name="conekta">ConeKta</string>
+    <string name="cash_on">Efectivo</string>
+
+    <string name="no_detail_found">No Detail found</string>
+    <string name="product_detail">Detalle del producto</string>
+    <string name="duration">Duration</string>
+    <string name="enter_supplier_code">Enter Supplier Code</string>
+    <string name="payment_card">Tarjeta</string>
+    <string name="payment_cash">Efectivo</string>
+    <string name="payment_both">Card/Cash On delivery</string>
+    <string name="today">Hoy</string>
+    <string name="yesterday">Ayer</string>
+    <string name="live_tracking">Live Tracking</string>
+    <string name="use_current_location">Use Current Location</string>
+    <string name="subtotal">SubTotal</string>
+    <string name="referral_amount">Referral Amount</string>
+    <string name="tap_to_copy">Tap to Copy</string>
+    <string name="refer_now">Refer Now</string>
+    <string name="sort_amp_filter">Ordenar y Filtar</string>
+
+    <string name="become_care_giver">Become a patient or caregiver</string>
+
+    <string name="things_to_remember">Things To Remember</string>
+
+    <string-array name="filter_array">
+        <item>Categorias</item>
+        <item>Ordenar</item>
+        <item>Rango de precios</item>
+        <item>Descuento</item>
+        <item>Disponibilidad</item>
+    </string-array>
+
+
+    <string-array name="food_instruct_header">
+        <item>Búscalo</item>
+        <item>Pídelo</item>
+        <item>Disfruta</item>
+    </string-array>
+
+<!--    <string-array name="food_instruct_header">
+        <item>Search</item>
+        <item>Online Order</item>
+        <item>Delivery</item>
+        <item>Map</item>
+    </string-array>-->
+
+    <string-array name="food_instruct_title">
+        <item>Explora los mejores restaurantes y locales de Caracas</item>
+        <item>Escoge el método de pago más conveniente</item>
+        <item>Delivery a tu casa u oficina</item>
+    </string-array>
+
+<!--
+    <string-array name="food_instruct_title">
+        <item>Explore World’s top restaurants &amp; food</item>
+        <item>Choose the preferable option for payment</item>
+        <item>Get high quality food for the best price</item>
+        <item>Map</item>
+    </string-array>
+-->
+
+    <string-array name="ecom_instruct_header">
+        <item>Búscalo</item>
+        <item>Selecciona</item>
+        <item>Disfruta</item>
+    </string-array>
+
+    <string-array name="ecom_instruct_title">
+        <item>Explore World’s top services</item>
+        <item>Choose the preferable option for service</item>
+        <item>Get high quality service for the best price</item>
+    </string-array>
+
+
+
+
+    <string name="choose_from_gallery">Gallery</string>
+    <string name="choose_image_selection">Choose Image Selection</string>
+    <string name="choose_from_camera">Camera</string>
+    <string name="login_sinup_text">Ingresar</string>
+    <string name="rating_given">Rating Given</string>
+    <string name="select_language">Select Language</string>
+    <string name="delivery_tag">Entrega</string>
+    <string name="pick_up_tag">Recoger</string>
+    <string name="offline_supplier_tag">The %s is not accepting online order</string>
+    <string name="returned_from_app_settings_to_activity">"Following permissions:           Camera: %s     "</string>
+    <string name="choose_payment_receipt_to_upload">Choose Payment Receipt To Upload</string>
+    <string name="payment_details">Payment Details:</string>
+    <string name="email_tag">Email: %s</string>
+    <string name="phoneno_tag">Phone Number: %s</string>
+    <string name="online_payment">Debit Cards</string>
+    <string name="payment_receipt_uploaded">Payment Receipt Uploaded</string>
+    <string name="enter_instruction">Enter Instructions Here</string>
+    <string name="select_preciption">Select Prescription to upload</string>
+    <string name="uploaded_pescription">Uploaded Prescription Documents</string>
+    <string name="please_select_precription">Please select Presciption image</string>
+    <string name="english">English</string>
+    <string name="supplier_service_charge">%s Service Charge</string>
+    <string name="support_email">Support Email</string>
+    <string name="support_email_text">Having Query with Order Id :%s</string>
+    <string name="service">service</string>
+    <string name="new_tag">New</string>
+    <string name="selected_question">Selected Questions</string>
+    <string name="addon_charges">AddOn Charges</string>
+    <string name="featured">Featured %s</string>
+    <string name="top_deals">Top Deals in %s</string>
+    <string name="feature_provider">Featured Service Providers</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="continue_with_google">Continue with google</string>
+    <string name="provacy_policy_text">By continuing, you agree to CARE\'s Terms and Conditions and confirm that you have read CARE\'s Privacy Policy.</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="sign_up_new">Sign up</string>
+    <string name="hint_first_name">First name *</string>
+    <string name="hint_last_name">Last name *</string>
+    <string name="hint_phone_no">Phone no *</string>
+    <string name="hint_email_new">Email *</string>
+    <string name="hint_password_new">Password *</string>
+    <string name="hint_confirm_password">Confirm password *</string>
+    <string name="signup_screen_text">Don\'t have an account? Sign up</string>
+    <string name="otp_msg_text">Enter the OTP sent to your registered email and phone number</string>
+    <string name="hint_enter_otp">Enter OTP</string>
+    <string name="verify">Verify</string>
+    <string name="plese_accept_terms_and_conditions">Please accept terms and conditions</string>
+    <string name="continue_with_facebook">Continue with facebook</string>
+    <string name="recommed_supplier">Recommended %s</string>
+    <string name="more">More</string>
+
+    <string name="save_card">SAVE CARD</string>
+    <string name="saved_cards">SAVED CARDS</string>
+    <string name="card_no_xxxxxxxxxxxx">card no :XXXXXXXXXXXX</string>
+    <string name="expiry_month">Expiry Month</string>
+
+    <string name="un_service_able">Cerrado</string>
+    <string name="card_add_login_error">Please login to add card</string>
+    <string name="square_pay">Square Pay</string>
+    <string name="select_time_slot">Select Time Slot</string>
+
+    <string name="area_to_focus_on">Area to focus on</string>
+    <string name="areas_to_focus">Areas to focus</string>
+    <string name="have_pets">Have pets</string>
+    <string name="parking_instructions">Parking instructions</string>
+    <string name="enter_parking_instruction">Enter parking instruction</string>
+    <string name="will_someone_be_there_to_let_the_cleaner_in">Will someone be there to let the cleaner in?</string>
+    <string name="shimmer_categories">Categorías</string>
+    <string name="enter_instructionc">Enter your #MC id here</string>
+
+    <string name="upload_presc">Upload Prescription</string>
+    <string name="request_id">Request Id:</string>
+    <string name="requested_on">Requested On:</string>
+    <string name="pay_now">Pay Now %1$s %2$.2f</string>
+    <string name="remaining_amount">Remaining Amount</string>
+
+    <string name="net_total_greater_than">Subtotal must be greater than %1$s %2$.2f</string>
+    <string name="maximum_limit_addon">Maximum addon limit reached %d</string>
+    <string name="refund_amount">Refund Amount</string>
+    <string name="token_expire">Sorry, your account has been logged in other device! Please login again to continue.</string>
+    <string name="service_detail">Service Detail</string>
+    <string name="paypal">Paypal</string>
+    <string name="donate_to_someone">Donate to someone</string>
+    <string name="adrs_donate_subtext">Please add the address below where you want to donate</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="return_request_msg">Your return request is generated successfully.</string>
+    <string name="rate_food_item">Rate %s</string>
+    <string name="rate_product_msg">Rate %s Successfully</string>
+
+    <string name="rate_user_tag">Rate %s</string>
+    <string name="paystack">PayStack</string>
+    <string name="online_pay_tag">Online(%s)</string>
+</resources>

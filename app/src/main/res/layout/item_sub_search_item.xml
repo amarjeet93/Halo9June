@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:background="@{color.listBackground}"
+        app:cardCornerRadius="@dimen/value_4"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/sdvProduct"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/divider"
+                app:background="@{color.divider}" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/value_8"
+                android:paddingTop="@dimen/value_8"
+                android:paddingRight="@dimen/value_8"
+                android:singleLine="true"
+                android:textColor="@color/light_text_color"
+                android:textSize="@dimen/text_size_12"
+                app:categoryType="list_head" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tv_total_prod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/value_8"
+                android:paddingRight="@dimen/value_8"
+                android:textColor="@color/light_text_color"
+                android:textSize="@dimen/text_size_12"
+                app:categoryType="list_head" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/value_4">
+
+                <ImageView
+                    android:id="@+id/ivMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_cart_minus_normal"
+                    tools:ignore="ContentDescription" />
+
+                <com.codebrew.clikat.utils.customviews.ClikatTextView
+                    android:id="@+id/tvCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/value_4"
+                    android:paddingEnd="@dimen/value_4"
+                    android:textSize="@dimen/text_size_14"
+                    app:categoryType="list_subhead" />
+
+                <ImageView
+                    android:id="@+id/ivPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_cart_plus_normal"
+                    tools:ignore="ContentDescription" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

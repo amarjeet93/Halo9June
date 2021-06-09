@@ -1,0 +1,142 @@
+{
+  "project_info": {
+    "project_number": "53130374485",
+    "project_id": "orderit-3db14",
+    "storage_bucket": "orderit-3db14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53130374485:android:33ef0e1ed975736a5193dc",
+        "android_client_info": {
+          "package_name": "com.Halo.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53130374485-71n4prdjlqrb568ohsec8rm27pnfuved.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Halo.user",
+            "certificate_hash": "7819a8815cbe4c1d43e97cf4ecb653c2ec667d6a"
+          }
+        },
+        {
+          "client_id": "53130374485-cpisg1a6228vvh902u3u97bbabalfl2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4g3gEhswr0JdAxEW2h9HMc28HTZDUo2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53130374485-cpisg1a6228vvh902u3u97bbabalfl2e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53130374485-p1sf0q261u3lka8csdlbsrkbaj953e46.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codebrew.tedFood"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53130374485:android:3de04ae230a5ddb15193dc",
+        "android_client_info": {
+          "package_name": "com.codebrew.clikat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53130374485-huo6buf4ugc220i5ip00mhhnh24e57un.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codebrew.clikat",
+            "certificate_hash": "7819a8815cbe4c1d43e97cf4ecb653c2ec667d6a"
+          }
+        },
+        {
+          "client_id": "53130374485-cpisg1a6228vvh902u3u97bbabalfl2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4g3gEhswr0JdAxEW2h9HMc28HTZDUo2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53130374485-cpisg1a6228vvh902u3u97bbabalfl2e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53130374485-p1sf0q261u3lka8csdlbsrkbaj953e46.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codebrew.tedFood"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53130374485:android:7b3defdf3e3863665193dc",
+        "android_client_info": {
+          "package_name": "com.orderit.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53130374485-amaduajvvhiib7add1fk3ns64pqa9v78.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orderit.user",
+            "certificate_hash": "7819a8815cbe4c1d43e97cf4ecb653c2ec667d6a"
+          }
+        },
+        {
+          "client_id": "53130374485-cpisg1a6228vvh902u3u97bbabalfl2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4g3gEhswr0JdAxEW2h9HMc28HTZDUo2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53130374485-cpisg1a6228vvh902u3u97bbabalfl2e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53130374485-p1sf0q261u3lka8csdlbsrkbaj953e46.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codebrew.tedFood"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

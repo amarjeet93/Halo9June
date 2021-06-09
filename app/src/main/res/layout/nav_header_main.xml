@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/side_panel"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/value_16"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:background="@{color.navBackground}"
+        tools:ignore="Overdraw">
+
+        <LinearLayout
+            android:id="@+id/lvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_16"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/sdvUser"
+                android:layout_width="@dimen/value_60"
+                android:layout_height="@dimen/value_60"
+                android:layout_gravity="center_vertical"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/value_16">
+
+                <com.codebrew.clikat.utils.customviews.ClikatTextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16"
+                    app:categoryType="text_head" />
+
+                <com.codebrew.clikat.utils.customviews.ClikatTextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guest"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"
+                    app:categoryType="nav_person_name" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.codebrew.clikat.utils.customviews.ClikatTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lvProfile"
+            android:layout_marginTop="@dimen/value_8"
+            android:background="@drawable/back_myaccount"
+            android:drawableStart="@drawable/ic_sp_location"
+            android:gravity="start|center"
+            android:padding="@dimen/value_8"
+            android:textSize="@dimen/text_size_12"
+            app:background="@{color.navHeadBackground}"
+            app:categoryType="nav_head" />
+    </RelativeLayout>
+</layout>

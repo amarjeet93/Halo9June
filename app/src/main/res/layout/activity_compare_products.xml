@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical"
+        app:background="@{color.appBackground}"
+        tools:ignore="Overdraw">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_2"
+            android:layout_marginBottom="@dimen/value_4"
+            android:clickable="false"
+            app:background="@{color.cardBackground}"
+            app:cardElevation="@dimen/cardElevation"
+            app:cardPreventCornerOverlap="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/value_8">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/value_4"
+                    android:padding="@dimen/value_4"
+                    app:cardElevation="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/sdvImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitCenter"
+                        tools:ignore="ContentDescription" />
+                </androidx.cardview.widget.CardView>
+
+
+                <com.codebrew.clikat.utils.customviews.ClikatTextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text_color_light"
+                    android:textSize="@dimen/text_size_16"
+                    app:categoryType="list_head"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cardView3"
+                    app:layout_constraintTop_toTopOf="@+id/cardView3" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:background="@{color.listBackground}" />
+
+    </LinearLayout>
+</layout>

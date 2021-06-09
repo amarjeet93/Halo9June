@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:paddingBottom="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+<ImageView
+    android:id="@+id/ivBack"
+    android:layout_marginTop="@dimen/dp_05"
+    android:layout_marginStart="@dimen/dp_05"
+    android:padding="@dimen/dp_05"
+    android:src="@drawable/ic_back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Group will be active for 2 minutes before order is sent to restaurant!"
+            android:id="@+id/tvTitle"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/value_16"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_marginStart="@dimen/value_30"
+            android:layout_marginEnd="@dimen/value_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginStart="@dimen/value_30"
+            android:layout_marginEnd="@dimen/value_30"
+            android:background="@color/grey_40"
+            android:layout_marginBottom="@dimen/value_4"
+            android:layout_marginTop="@dimen/value_20"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <EditText
+            android:paddingTop="@dimen/value_16"
+            android:paddingBottom="@dimen/value_16"
+            android:layout_marginStart="@dimen/value_30"
+            android:layout_marginEnd="@dimen/value_30"
+            android:hint="Enter Group Name"
+            android:textColorHint="@color/grey_40"
+            android:background="@drawable/background_grey_border"
+            android:paddingStart="@dimen/dp_05"
+            android:paddingEnd="@dimen/dp_05"
+            android:id="@+id/etGroup"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Create/Join Group"
+            android:id="@+id/tvCreateGroup"
+            android:textColor="@color/white"
+            android:background="@drawable/back_black"
+            android:paddingStart="@dimen/value_60"
+            android:paddingEnd="@dimen/value_60"
+            android:paddingTop="@dimen/value_16"
+            android:paddingBottom="@dimen/value_16"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/value_16"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginStart="@dimen/value_30"
+            android:layout_marginEnd="@dimen/value_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

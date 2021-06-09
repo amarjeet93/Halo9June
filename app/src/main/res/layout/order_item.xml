@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:background="@{color.listItemBackground}">
+
+        <TextView
+            android:id="@+id/tvSubcategoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/value_12"
+            android:paddingTop="@dimen/value_12"
+            android:paddingRight="@dimen/value_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/value_4">
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvItemName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:paddingLeft="@dimen/value_12"
+                android:paddingTop="@dimen/value_12"
+                android:paddingRight="@dimen/value_12"
+                android:textColor="@color/text_color_normal"
+                android:textSize="@dimen/text_size_12"
+                app:categoryType="list_subhead" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvSize"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="start"
+                android:paddingLeft="@dimen/value_12"
+                android:paddingTop="@dimen/value_12"
+                android:paddingRight="@dimen/value_12"
+                android:textColor="@color/text_color_normal"
+                android:textSize="@dimen/text_size_12"
+                app:categoryType="list_subhead" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tv_total_prod"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="end"
+                android:paddingLeft="@dimen/value_12"
+                android:paddingTop="@dimen/value_12"
+                android:paddingRight="@dimen/value_12"
+                android:textColor="@color/text_color_normal"
+                android:textSize="@dimen/text_size_12"
+                app:categoryType="list_subhead" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

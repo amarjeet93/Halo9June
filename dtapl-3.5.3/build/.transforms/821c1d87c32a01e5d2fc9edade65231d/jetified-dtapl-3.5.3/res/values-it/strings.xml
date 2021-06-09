@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nw_error_button_cancel">Annullare</string>
+    <string name="nw_error_button_retry">Riprovare</string>
+    <string name="nw_error_message">Si é verificato un errore di connessione. Pf. riprovare.</string>
+    <string name="nw_error_title">Errore</string>
+    <string name="nw_indicator_message">Trasmissione dati in corso...</string>
+</resources>

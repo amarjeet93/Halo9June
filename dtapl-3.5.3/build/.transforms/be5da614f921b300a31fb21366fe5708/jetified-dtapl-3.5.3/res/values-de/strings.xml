@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nw_error_button_cancel">Abbrechen</string>
+    <string name="nw_error_button_retry">Wiederholen</string>
+    <string name="nw_error_message">Ein Verbindungsfehler ist aufgetreten. Bitte versuchen Sie es erneut.</string>
+    <string name="nw_error_title">Fehler</string>
+    <string name="nw_indicator_message">Datenübermittlung...</string>
+</resources>

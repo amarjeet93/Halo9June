@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.codebrew.clikat.utils.customviews.ClikatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:padding="@dimen/dp_04"
+            android:src="@drawable/ic_back"
+            app:imageType="normal_icon"
+            app:src="@{drawables.ic_back}"
+            tools:ignore="ContentDescription" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/start_gudline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/medium_margin" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/end_gudline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/medium_margin" />
+
+
+                <TextView
+                    android:id="@+id/otp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xlarge_margin"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/otp_verification"
+                    android:textSize="@dimen/text_xtralarge"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_sender_phone"
+                    app:layout_constraintStart_toStartOf="@+id/start_gudline"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:textcolor="@{color.textHead}" />
+
+                <com.codebrew.clikat.utils.customviews.ClikatTextView
+                    android:id="@+id/tv_sender_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="Enter the OTP sent to +976 9876543210"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintBottom_toTopOf="@+id/etOtp"
+                    app:layout_constraintStart_toStartOf="@id/start_gudline"
+                    app:layout_constraintTop_toBottomOf="@+id/otp_text" />
+
+
+                <EditText
+                    android:id="@+id/etOtp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xlarge_margin"
+                    android:hint="@string/enter_otp"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:paddingTop="@dimen/medium_margin"
+                    android:paddingBottom="@dimen/medium_margin"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintBottom_toTopOf="@+id/tvSubmit"
+                    app:layout_constraintEnd_toEndOf="@id/end_gudline"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/start_gudline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_sender_phone" />
+
+
+                <Button
+                    android:id="@+id/tvSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:padding="@dimen/medium_margin"
+                    android:text="@string/submit"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14"
+                    app:background="@{color.primaryColor}"
+                    app:textcolor="@{color.appBackground}"
+                    style="@style/Widget.MaterialComponents.Button"
+                    app:rippleColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/tvText"
+                    app:layout_constraintEnd_toEndOf="@id/end_gudline"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/start_gudline"
+                    app:layout_constraintTop_toBottomOf="@+id/etOtp" />
+
+
+                <TextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_margin"
+                    android:fontFamily="@font/proximanovaregular"
+                    android:text="@string/recieve_otp"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvResend"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@id/start_gudline"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSubmit"
+                    app:textcolor="@{color.textSubhead}" />
+
+                <TextView
+                    android:id="@+id/tvResend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:enabled="false"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:text="@string/resend_otp"
+                    android:textColor="@color/light_grey"
+                    android:textSize="@dimen/text_size_12"
+                    android:visibility="invisible"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tvText"
+                    app:layout_constraintEnd_toEndOf="@id/end_gudline"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

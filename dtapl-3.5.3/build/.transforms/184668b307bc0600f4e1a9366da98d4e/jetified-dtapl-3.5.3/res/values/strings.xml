@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nw_error_button_cancel">Cancel</string>
+    <string name="nw_error_button_retry">Try again</string>
+    <string name="nw_error_message">A connection error occurred. Please try again.</string>
+    <string name="nw_error_title">Connection Error</string>
+    <string name="nw_indicator_message">Transmitting...</string>
+</resources>

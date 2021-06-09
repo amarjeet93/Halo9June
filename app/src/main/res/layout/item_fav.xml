@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/value_4"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:background="@{color.listItemBackground}">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/sdvProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    tools:ignore="ContentDescription" />
+
+
+                <com.codebrew.clikat.utils.customviews.ClikatImageView
+                    android:id="@+id/ivTick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/value_4"
+                    android:src="@drawable/ic_check_on"
+                    android:visibility="visible"
+                    app:src="@{drawables.ic_check_on}"
+                    tools:ignore="ContentDescription" />
+
+                <!--</LinearLayout>-->
+
+            </RelativeLayout>
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_4"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_14"
+                app:categoryType="list_head" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tvProductSupplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_4"
+                android:singleLine="true"
+                android:textColor="@color/light_text_color"
+                android:textSize="@dimen/text_size_12"
+                app:categoryType="list_subhead" />
+
+            <com.codebrew.clikat.utils.customviews.ClikatTextView
+                android:id="@+id/tv_total_prod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_4"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_12"
+                app:categoryType="list_body" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:background="@{color.appBackground}">
+
+        <TextView
+            android:id="@+id/tv_varientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_2"
+            android:fontFamily="@font/proximanovasemibold"
+            android:text="@string/filter"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            app:textcolor="@{color.textSubhead}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_varient_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:nestedScrollingEnabled="false"
+            app:background="@{color.listBackground}"
+            tools:targetApi="lollipop">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</layout>

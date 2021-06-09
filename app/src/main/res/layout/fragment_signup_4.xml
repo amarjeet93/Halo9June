@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.codebrew.clikat.utils.customviews.ClikatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:padding="@dimen/dp_04"
+            android:src="@drawable/ic_back"
+            app:imageType="normal_icon"
+            app:src="@{drawables.ic_back}"
+            tools:ignore="ContentDescription" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLayoutProfileFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:background="@{color.appBackground}">
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/start_gudline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/medium_margin" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/end_gudline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/medium_margin" />
+
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/xlarge_margin"
+                    android:background="@drawable/ic_user_placeholder"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toTopOf="@+id/tvText"
+                    app:layout_constraintStart_toStartOf="@id/start_gudline"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.04000002"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <com.codebrew.clikat.utils.customviews.ClikatTextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:text="@string/tap_to_add_profile_pic"
+                    app:categoryType="text_head"
+                    app:layout_constraintBottom_toTopOf="@+id/inputLayout"
+                    app:layout_constraintStart_toStartOf="@id/start_gudline"
+                    app:layout_constraintTop_toBottomOf="@+id/ivImage"
+                    app:text="@{strings.tap_to_add_profile_pic}" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_margin"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintBottom_toTopOf="@+id/tvFinish"
+                    app:layout_constraintEnd_toEndOf="@id/end_gudline"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/start_gudline"
+                    app:layout_constraintTop_toBottomOf="@+id/tvText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/hint_full_name"
+                        android:paddingTop="@dimen/medium_margin"
+                        android:paddingBottom="@dimen/medium_margin"
+                        android:textSize="@dimen/text_size_16"
+                        app:hint="@{strings.hint_password}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lastNameInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintBottom_toTopOf="@+id/tvFinish"
+                    app:layout_constraintEnd_toEndOf="@id/end_gudline"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/start_gudline"
+                    app:layout_constraintTop_toBottomOf="@+id/inputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/hint_last_namee"
+                        android:paddingTop="@dimen/medium_margin"
+                        android:paddingBottom="@dimen/medium_margin"
+                        android:textSize="@dimen/text_size_16"
+                        app:hint="@{strings.hint_password}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/tvFinish"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/value_16"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:padding="@dimen/value_16"
+                    android:text="@string/finish"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16"
+                    app:background="@{color.primaryColor}"
+                    app:textcolor="@{color.appBackground}"
+                    style="@style/Widget.MaterialComponents.Button"
+                    app:rippleColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lastNameInputLayout"
+                    app:layout_constraintVertical_bias="0.01999998" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

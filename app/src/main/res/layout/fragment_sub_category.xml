@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.codebrew.clikat.module.subcategory.SubCategoryViewModel" />
+
+        <variable
+            name="colors"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgListing"
+        app:background="@{colors.appBackground}"
+        tools:ignore="Overdraw">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_app"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:color="@{colors}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strings="@{strings}" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_lyt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_8"
+                android:background="@drawable/rec_4_transparent"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableStart="@drawable/ic_search_grey"
+                    android:drawablePadding="@dimen/value_4"
+                    android:hint="@string/what_are_you_looking_for"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_12" />
+
+                <View
+                    android:layout_width="@dimen/line_height"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/value_8"
+                    android:layout_marginBottom="@dimen/value_8"
+                    android:background="@color/divider"
+                    android:visibility="gone" />
+
+                <com.codebrew.clikat.utils.customviews.ClikatImageView
+                    android:id="@+id/ivMultiSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/value_12"
+                    android:src="@drawable/ic_search_multi"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:visibility="@{viewModel.isSubCat()==0 ? View.GONE : View.VISIBLE}"
+            app:background="@{colors.listBackground}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_cart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_lyt">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <include
+            android:id="@+id/bottom_cart"
+            layout="@layout/layout_bottom_cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:color="@{colors}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <include
+            android:id="@+id/noData"
+            layout="@layout/nothing_found"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="@{viewModel.isSubCat()==0 &amp; viewModel.isLoading ? View.VISIBLE : View.GONE}"
+            app:color="@{colors}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_lyt"
+            app:layout_constraintVertical_bias="0.0"
+            app:strings="@{strings}" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:progessBackground="@{colors.primaryColor}" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

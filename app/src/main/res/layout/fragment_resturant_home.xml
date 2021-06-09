@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.codebrew.clikat.module.home_screen.resturant_home.ResturantHomeFrag">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:background="@{color.appBackground}">
+
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/toolbar_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:color="@{color}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strings="@{strings}" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_home"
+            style="@style/MyTabLayoutSmallCase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:background="@{color.appBackground}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
+            app:tabGravity="fill"
+            app:tabIndicateColr="@{color.textAppTitle}"
+            app:tabIndicatorHeight="2dp"
+            app:tabInlineLabel="true"
+            app:tabMode="fixed"
+            app:tabPaddingStart="@dimen/small_margin"
+            app:tabSelectedText="@{color.textAppTitle}"
+            app:tabTextColr="@{color.textSubhead}">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_delivery"
+                android:text="@string/delivery_txt" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_pickup"
+                android:text="@string/pickup" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_home">
+
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

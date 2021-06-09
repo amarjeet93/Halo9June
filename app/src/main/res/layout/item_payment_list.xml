@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/rb_choose_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_04"
+        android:background="?android:attr/selectableItemBackground"
+        android:drawableEnd="@drawable/ic_next"
+        android:fontFamily="@font/proximanovaregular"
+        android:gravity="start|center"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:onClick="@{() -> listener.imageClick(payModel)}"
+        android:padding="@dimen/dp_04"
+        android:text="@string/supplier_name"
+        android:textSize="@dimen/text_medium"
+        app:text="@{payModel.payName}" />
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.codebrew.clikat.module.payment_gateway.adapter.PayListener" />
+
+        <variable
+            name="payModel"
+            type="com.codebrew.clikat.data.model.others.CustomPayModel" />
+
+    </data>
+</layout>

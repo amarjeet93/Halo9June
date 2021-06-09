@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/side_panel"
+        app:background="@{color.navBackground}"
+        tools:ignore="Overdraw">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/value_12">
+
+                <include
+                    layout="@layout/layout_side_panel_first"
+                    app:color="@{color}"
+                    app:drawables="@{drawables}"
+                    app:strings="@{strings}" />
+
+                <include
+                    layout="@layout/layout_side_panel_my_account"
+                    app:color="@{color}"
+                    app:drawables="@{drawables}"
+                    app:strings="@{strings}" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <com.codebrew.clikat.utils.customviews.ClikatImageView
+                        android:id="@+id/ivFacebook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/value_4"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_round"
+                        android:padding="@dimen/value_4"
+                        android:src="@drawable/ic_fb"
+                        app:imageType="nav_social_icon"
+                        app:src="@{drawables.ic_fb}"
+                        tools:ignore="ContentDescription" />
+
+                    <com.codebrew.clikat.utils.customviews.ClikatImageView
+                        android:id="@+id/ivTwiiter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/value_4"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_round"
+                        android:padding="@dimen/value_4"
+                        android:src="@drawable/ic_twitter"
+                        app:imageType="nav_social_icon"
+                        app:src="@{drawables.ic_twitter}"
+                        tools:ignore="ContentDescription" />
+
+                    <com.codebrew.clikat.utils.customviews.ClikatImageView
+                        android:id="@+id/ivInstaGram"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/value_4"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_round"
+                        android:padding="@dimen/value_4"
+                        android:src="@drawable/ic_instagram"
+                        app:imageType="nav_social_icon"
+                        app:src="@{drawables.ic_instagram}"
+                        tools:ignore="ContentDescription" />
+
+                    <com.codebrew.clikat.utils.customviews.ClikatImageView
+                        android:id="@+id/ivyoutuibe"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/value_4"
+                        android:layout_weight="1"
+                        android:background="@drawable/back_round"
+                        android:padding="@dimen/value_4"
+                        android:src="@drawable/ic_youtube"
+                        app:imageType="nav_social_icon"
+                        app:src="@{drawables.ic_youtube}"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

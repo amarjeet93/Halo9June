@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/navigation_home_selector"
+        android:title="@string/title_home"/>
+
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/navigation_cart_selector"
+        android:title="@string/cart"/>
+
+
+    <item
+        android:id="@+id/take_away"
+        android:icon="@drawable/navigation_take_away_selector"
+        android:title="@string/take_away"/>
+
+
+    <item
+        android:id="@+id/other"
+        android:icon="@drawable/navigation_other_selector"
+        android:title="@string/profile"/>
+
+</menu>

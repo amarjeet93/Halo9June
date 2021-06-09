@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="color"
+            type="com.codebrew.clikat.utils.configurations.ColorConfig" />
+
+        <variable
+            name="drawables"
+            type="com.codebrew.clikat.utils.configurations.DrawablesConfig" />
+
+        <variable
+            name="strings"
+            type="com.codebrew.clikat.utils.configurations.TextConfig" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical"
+        app:background="@{color.appBackground}"
+        tools:ignore="Overdraw">
+
+
+        <include
+            layout="@layout/toolbar_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@{color}"
+            app:strings="@{strings}" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llPickup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/value_4"
+                        android:paddingRight="@dimen/value_4">
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvPickup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/value_8"
+                            android:padding="@dimen/value_8"
+                            android:text="@string/pickkup"
+                            android:textColor="@color/light_blue"
+                            app:categoryType="text_head"
+                            app:text="@{strings.pickkup}" />
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvPickupName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/value_8"
+                            android:paddingRight="@dimen/value_8"
+                            android:textColor="@color/text_color_light"
+                            app:categoryType="text_subhead" />
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvPickupAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/value_8"
+                            android:paddingRight="@dimen/value_8"
+                            android:textColor="@android:color/darker_gray"
+                            app:categoryType="text_body" />
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvPickupDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/value_12"
+                            android:paddingLeft="@dimen/value_8"
+                            android:paddingRight="@dimen/value_8"
+                            android:textColor="@color/text_color_light"
+                            app:categoryType="text_subhead" />
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvPickupTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/value_16"
+                            android:paddingLeft="@dimen/value_8"
+                            android:paddingRight="@dimen/value_8"
+                            android:textColor="@color/text_color_light"
+                            app:categoryType="text_subhead" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/vDivider"
+                        android:layout_width="@dimen/line_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/divider" />
+
+                    <LinearLayout
+                        android:id="@+id/llDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/value_4"
+                        android:paddingRight="@dimen/value_4">
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvDelivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/value_8"
+                            android:padding="@dimen/value_8"
+                            android:text="@{@string/delivery(strings.order)}"
+                            android:textColor="@color/light_blue"
+                            app:categoryType="text_head" />
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvDeliveryName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/value_8"
+                            android:paddingRight="@dimen/value_8"
+                            android:textColor="@color/text_color_light"
+                            app:categoryType="text_subhead" />
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvDeliveryAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/value_8"
+                            android:paddingRight="@dimen/value_8"
+                            android:textColor="@android:color/darker_gray"
+                            app:categoryType="text_body" />
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvDeliveryDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/value_12"
+                            android:paddingLeft="@dimen/value_8"
+                            android:paddingRight="@dimen/value_8"
+                            android:textColor="@color/text_color_light"
+                            app:categoryType="text_subhead" />
+
+                        <com.codebrew.clikat.utils.customviews.ClikatTextView
+                            android:id="@+id/tvDeliveryTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/value_8"
+                            android:paddingRight="@dimen/value_8"
+                            android:textColor="@color/text_color_light"
+                            app:categoryType="text_subhead" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/divider" />
+
+                <com.codebrew.clikat.utils.customviews.ClikatTextView
+                    android:id="@+id/tvitems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/value_12"
+                    android:paddingTop="@dimen/value_12"
+                    android:paddingRight="@dimen/value_12"
+                    android:text="@string/items"
+                    android:textColor="@color/light_blue"
+                    app:categoryType="text_head"
+                    app:text="@{strings.items}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_marginTop="@dimen/value_12"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/value_12"
+                    android:paddingTop="@dimen/value_12"
+                    android:paddingRight="@dimen/value_12">
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvNetTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/net_total"
+                        android:textColor="@color/text_color_normal"
+                        android:textSize="@dimen/text_size_12"
+                        app:categoryType="text_subhead"
+                        app:text="@{strings.net_total}" />
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvNetTotalValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/text_size_12"
+                        app:categoryType="text_subhead" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rvDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/value_12"
+                    android:paddingTop="@dimen/value_12"
+                    android:paddingRight="@dimen/value_12">
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvDeliveryCharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivery_charges"
+                        android:textColor="@color/text_color_normal"
+                        android:textSize="@dimen/text_size_12"
+                        app:categoryType="text_subhead"
+                        app:text="@{strings.delivery_charges}" />
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvDeliveryChargesValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/text_size_12"
+                        app:categoryType="text_subhead" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rvHandling"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/value_12"
+                    android:paddingTop="@dimen/value_12"
+                    android:paddingRight="@dimen/value_12">
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvHandling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/handling_charges"
+                        android:textColor="@color/text_color_normal"
+                        android:textSize="@dimen/text_size_12"
+                        app:categoryType="text_subhead" />
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvHandlingValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/text_size_12"
+                        app:categoryType="text_subhead" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlDiscount"
+                    style="@style/padding12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/value_8"
+                    android:visibility="gone">
+
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/txtDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/discount"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold"
+                        app:text="@{strings.discount}" />
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:singleLine="true"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/value_12"
+                    android:paddingTop="@dimen/value_16"
+                    android:paddingRight="@dimen/value_12">
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvNetPayable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/net_payable"
+                        android:textColor="@color/text_color_normal"
+                        android:textSize="@dimen/text_size_16"
+                        app:categoryType="text_head"
+                        app:text="@{strings.net_payable}" />
+
+                    <com.codebrew.clikat.utils.customviews.ClikatTextView
+                        android:id="@+id/tvNetPayableValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/brown"
+                        android:textSize="@dimen/text_size_16"
+                        app:categoryType="text_head" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_marginTop="@dimen/value_12"
+                    android:background="@color/divider" />
+
+                <com.codebrew.clikat.utils.customviews.ClikatTextView
+                    android:id="@+id/tvAdditionalRemarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/value_12"
+                    android:text="@string/additional_remarks"
+                    android:textColor="@android:color/darker_gray"
+                    app:categoryType="text_head"
+                    app:text="@{strings.additional_remarks}" />
+
+                <EditText
+                    android:id="@+id/edAdditionalRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/value_8"
+                    android:layout_marginTop="@dimen/value_8"
+                    android:background="@color/bgListing"
+                    android:gravity="start"
+                    android:hint="@string/type_here"
+                    android:lines="7"
+                    android:padding="@dimen/value_4"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/placeOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/brown"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="@dimen/value_16"
+            android:text="@{@string/place_order(strings.order)}"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:background="@{color.primaryColor}"
+            app:textcolor="@{color.appBackground}" />
+    </LinearLayout>
+</layout>

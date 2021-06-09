@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle"
+            android:tint="#F5F7FB">
+
+        </shape>
+    </item>
+
+    <item>
+        <bitmap
+            android:src="@drawable/bg_home_header"
+            android:tint="@color/colorPrimary" />
+    </item>
+</layer-list>
